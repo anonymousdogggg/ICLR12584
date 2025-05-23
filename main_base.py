@@ -72,12 +72,10 @@ def train_with_fair_rebalance(args, model, optimizer, train_dataloader, epoch, g
         if len(group_u_idx) == 0:
             Lu_loss = 0
         else:
-            # Lu_loss = criterion(logit[group_u_idx], x[group_u_idx])
             Lu_loss = torch.norm(logit[group_u_idx] - x[group_u_idx], p=2).sum()
         if len(group_p_idx) == 0:
             Lp_loss = 0
         else:
-            # Lp_loss = criterion(logit[group_p_idx], x[group_p_idx])
             Lp_loss = torch.norm(logit[group_p_idx] - x[group_p_idx], p=2).sum()
 
         if args.weightmode == "new":
@@ -171,7 +169,6 @@ def test(args, model, test_dataloader, k=500):
         pred = torch.zeros(label_array.shape[0]).to(args.device)
         pred[idx] = 1
         correct_pred = pred * label_array
-        # Acc
         test_acc = accuracy(pred, label_array)
         group1_acc = accuracy(pred[test_dataloader.group1_idx], label_array[test_dataloader.group1_idx])
         group2_acc = accuracy(pred[test_dataloader.group2_idx], label_array[test_dataloader.group2_idx])
