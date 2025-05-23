@@ -6,7 +6,7 @@ This is the repo for the code of our NeurIPS submission 24675.
 CUDA_VISIBLE_DEVICES=CUDA_ID python main_base.py  --dataset mnistandusps --ratio 0 --alpha 4 --seed 40 --lossmode lc1`
 
 
-### Some important files and folders:
+### Important files and folders:
 - data_loader.py: Data preprossing and loading
 - main_base.py: The main implementation of our method
 
