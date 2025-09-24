@@ -310,7 +310,7 @@ def parsers_parser():
     parser.add_argument('--valid_batch_size', type=int, default=64)
     parser.add_argument('--test_batch_size', type=int, default=64)
     # model
-    parser.add_argument('--lr', type=float, default=0.003)
+    parser.add_argument('--lr', type=float, default=0.001)
     parser.add_argument('--model', type=str, default='autoencoder', help='logistic, mlp, cnn, '
                                                               'resnet18, resnet34, resnet50'
                                                               'linear_resnet18, linear_resnet34, linear_resnet50') # TODO: check this
