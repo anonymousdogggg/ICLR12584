@@ -1,4 +1,4 @@
-This is the repo for the code of our NeurIPS submission 24675.
+This is the repo for the code of our ICLR submission 12584.
 
 ### An example script to run the code:
 
